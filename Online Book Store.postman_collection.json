@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "e9778656-9835-4712-b9db-ba3adbd6f496",
+		"name": "Online Book Store",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/book-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"book-list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"The Lord of the Rings\",\n        \"description\": \"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them\",\n        \"author\": \" J.R.R. Tolkien\",\n        \"type\": \"FICTION\",\n        \"price\": 800,\n        \"isbn\": \"98-9874-2345-134\"\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/add-new-book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"add-new-book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Book",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"The Lord of the Rings UPDATE\",\n    \"description\": \"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them\",\n    \"author\": \" J.R.R. Tolkien\",\n    \"type\": \"FICTION\",\n    \"price\": 1200,\n    \"isbn\": \"98-9874-2345-134\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/update-book?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"update-book"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Book By Id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/delete-book?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"delete-book"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout Books",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/checkout?books=1,2&promotionCode=OCT2021-01",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"checkout"
+					],
+					"query": [
+						{
+							"key": "books",
+							"value": "1,2"
+						},
+						{
+							"key": "promotionCode",
+							"value": "OCT2021-01"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
