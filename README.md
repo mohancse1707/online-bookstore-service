@@ -1,7 +1,20 @@
-# online-bookstore-service
-Online Bookstore API Spring Boot 
+## Online Bookstore API - Spring Boot
 
+This is a sample backend Rest API application.This project demonstrates where the user can perform CRUD and checkout operations.
 
+### Technologies
+
+* Java 1.8
+* Spring
+* Spring Boot
+* H2 Database (in-memory)
+* Maven Build Tool [Download][Maven]
+
+```Make sure Java and Maven is installed and set in the system path before proceeding to build & deployments```
+
+:point_right:
+
+> **WARNING**:
 
 ```json
 {

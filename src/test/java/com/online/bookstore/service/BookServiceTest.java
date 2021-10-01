@@ -3,10 +3,8 @@ package com.online.bookstore.service;
 import com.online.bookstore.entity.Book;
 import com.online.bookstore.repository.BookRepository;
 import com.online.bookstore.service.dto.BookDTO;
-import com.online.bookstore.service.impl.BookServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,6 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
 import static org.mockito.Mockito.mock;
 
 @ExtendWith(SpringExtension.class)
